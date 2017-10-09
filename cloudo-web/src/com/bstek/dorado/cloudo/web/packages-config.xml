@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<Patterns>
+		<Pattern name="cloudo-js" contentType="text/javascript"
+			charset="UTF-8" mergeRequests='${configure["view.mergeJavaScript"]}'
+			resourceSuffix=".js" />
+		<Pattern name="cloudo-css" contentType="text/css" charset="UTF-8"
+			mergeRequests='${configure["view.mergeStyleSheet"]}'  resourceSuffix=".css" />
+	</Patterns>
+	<Packages>
+		<Package name="cloudo-icon" pattern="res-css"
+			baseUri=">dorado/client/resources/cloudo">
+			classpath:dorado/resources/cloudo/icon,
+			classpath:dorado/resources/cloudo/touch-pad,
+			classpath:dorado/resources/cloudo/core
+		</Package>
+		
+		<Package name="cloudo-breadcrumb-skins" pattern="cloudo-css" depends="cloudo-icon">
+			dorado/skins/ide-blue/cloudo/breadcrumb
+		</Package>
+		<Package name="cloudo-base" pattern="cloudo-js"
+			depends="cloudo-breadcrumb-skins,cloudo-core,cloudo-plugin-register,cloudo-widget,cloudo-event-editor,cloudo-json-editor,cloudo-widget-breadcrumb,cloudo-jseditor,cloudo-property-editor,cloudo-output,cloudo-wizard,cloudo-modules,cloudo-listener,cloudo-socket-server,font-awesome,silk,entypo"></Package>
+
+		<Package name="cloudo-core" pattern="cloudo-js"
+			depends="widget,grid,tree-grid,block-view,tag-editor">
+			dorado/scripts/cloudo/core/core,
+			dorado/scripts/cloudo/core/rule,
+			dorado/scripts/cloudo/core/data-type,
+			dorado/scripts/cloudo/core/portal,
+			dorado/scripts/cloudo/core/parser,
+			dorado/scripts/cloudo/core/model,
+			dorado/scripts/cloudo/core/device,
+			dorado/scripts/cloudo/core/node-helper,
+			dorado/scripts/cloudo/core/view-config,
+			dorado/scripts/cloudo/core/clipboard,
+			dorado/scripts/cloudo/core/toolkits,
+			dorado/scripts/cloudo/core/selections,
+			dorado/scripts/cloudo/core/hotkeys,
+			dorado/scripts/cloudo/core/dorado-override,
+			dorado/scripts/cloudo/core/events,
+			dorado/scripts/cloudo/core/label-parser,
+			dorado/scripts/cloudo/core/commands,
+			dorado/scripts/cloudo/core/commands-object,
+			dorado/scripts/cloudo/core/commands-executor
+		</Package>
+		<Package name="cloudo-plugin-register" pattern="cloudo-js">
+			dorado/scripts/cloudo/plugins/register
+		</Package>
+		<Package name="cloudo-output" pattern="cloudo-js">
+			dorado/scripts/cloudo/output/outputter
+		</Package>
+		<Package name="cloudo-widget" pattern="cloudo-js" depends="cloudo-core">
+			dorado/scripts/cloudo/widget/widget,
+			dorado/scripts/cloudo/widget/action-bar,
+			dorado/scripts/cloudo/widget/float-bar,
+			dorado/scripts/cloudo/widget/taglist-editor,
+			dorado/scripts/cloudo/widget/component-selector,
+			dorado/scripts/cloudo/widget/layer,
+			dorado/scripts/cloudo/widget/node/abstract-editor,
+			dorado/scripts/cloudo/widget/node/tree-editor,
+			dorado/scripts/cloudo/widget/node/draw-editor,
+			dorado/scripts/cloudo/widget/dynamic-grid,
+			dorado/scripts/cloudo/widget/property/tabel/abstract-tabel,
+			dorado/scripts/cloudo/widget/property/tabel/direct-tabel,
+			dorado/scripts/cloudo/widget/property/tabel/layout-tabel,
+			dorado/scripts/cloudo/widget/property/tabel/position-tabel,
+			dorado/scripts/cloudo/widget/event-tabel,
+			dorado/scripts/cloudo/widget/outline
+		</Package>
+
+
+		<Package name="cloudo-widget-breadcrumb" pattern="cloudo-js"
+			depends="widget,cloudo-breadcrumb-skins">
+			dorado/scripts/cloudo/widget/breadcrumb
+		</Package>
+		<Package name="cloudo-event-editor" pattern="cloudo-js"
+			depends="cloudo-widget,cloudo-jseditor">
+			dorado/scripts/cloudo/widget/event-editor
+		</Package>
+		<Package name="cloudo-json-editor" pattern="cloudo-js"
+			depends="cloudo-widget,cloudo-event-editor">
+			dorado/scripts/cloudo/widget/json-editor
+		</Package>
+		<Package name="cloudo-property-editor" pattern="cloudo-js"
+			depends="cloudo-widget,cloudo-jseditor">
+			dorado/scripts/cloudo/widget/property/editor/property-editor,
+			dorado/scripts/cloudo/widget/property/editor/datatype-selector,
+			dorado/scripts/cloudo/widget/property/editor/datatype-parent-selector,
+			dorado/scripts/cloudo/widget/property/editor/enum-editor,
+			dorado/scripts/cloudo/widget/property/editor/reference-picker,
+			dorado/scripts/cloudo/widget/property/editor/tradition-editor,
+			dorado/scripts/cloudo/widget/property/editor/iconclass-picker,
+			dorado/scripts/cloudo/widget/property/editor/datapath-picker,
+			dorado/scripts/cloudo/widget/property/editor/multiple-editor,
+			dorado/scripts/cloudo/widget/property/editor/service-selector
+		</Package>
+		<Package name="cloudo-wizard" pattern="cloudo-js" depends="cloudo-widget">
+			dorado/scripts/cloudo/wizard/wizard,
+			dorado/scripts/cloudo/wizard/autoform-wizard,
+			dorado/scripts/cloudo/wizard/datagrid-wizard
+		</Package>
+		<Package name="cloudo-modules" pattern="cloudo-js">
+			dorado/scripts/cloudo/core/node-editor-manager,
+			dorado/scripts/cloudo/core/outline-manager,
+			dorado/scripts/cloudo/core/prop-editor-manager
+		</Package>
+
+		<Package name="cloudo-listener" pattern="cloudo-js">
+			dorado/scripts/cloudo/listener/cloudo-init,
+			dorado/scripts/cloudo/listener/current-change,
+			dorado/scripts/cloudo/listener/command-execute
+		</Package>
+		<!-- cloudo socket -->
+		<Package name="cloudo-socket-io" pattern="cloudo-js">
+			dorado/scripts/cloudo/socket/socket.io
+		</Package>
+
+		<Package name="cloudo-socket-server" pattern="cloudo-js"
+			depends="cloudo-socket-io">
+			dorado/scripts/cloudo/socket/server
+		</Package>
+		<Package name="cloudo-socket-client" pattern="cloudo-js"
+			depends="cloudo-socket-io">
+			dorado/scripts/cloudo/socket/client
+		</Package>
+		<!-- cloudo preview -->
+		<Package name="cloudo-preview-support" pattern="cloudo-js">
+			dorado/scripts/cloudo/core/preview-support
+		</Package>
+		
+	</Packages>
+</config>

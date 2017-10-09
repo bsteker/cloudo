@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: dorado studio
+Bundle-SymbolicName: com.bstek.ide.studio;singleton:=true
+Bundle-Version: 1.0.1
+Bundle-Activator: com.bstek.ide.studio.Activator
+Bundle-Vendor: BSTEK
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ org.eclipse.jdt,
+ org.eclipse.jdt.core,
+ org.eclipse.jdt.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .,
+ lib/fastjson-1.1.43.jar

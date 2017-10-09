@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.bstek.ide.studio.feature"
+      label="com.bstek.ide.studio.feature"
+      version="1.0.1"
+      provider-name="bstek">
+
+   <description url="www.bstek.com">
+      bstek studio plugins
+   </description>
+
+   <copyright url="http://www.bstek.com">
+      bstek studio plugins
+   </copyright>
+
+   <license url="http://www.bstek.com">
+      studio, Bstek Development Framework
+Copyright 2012-2014, BSTEK
+Dual licensed under the Bstek Commercial or LGPL Version 3 licenses.
+http://www.bstek.com/
+   </license>
+
+   <plugin
+         id="com.bstek.ide.studio"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

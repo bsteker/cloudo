@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean parent="dorado.packagesConfigLoader">
+		<property name="configLocation"
+			value="com/bstek/dorado/cloudo/workbench/packages-config.xml" />
+	</bean>
+	<bean id="dorado.cloudo.workbench.FileController"
+		class="com.bstek.dorado.cloudo.workbench.controller.FileController" />
+		<bean class="com.bstek.dorado.cloudo.workbench.StartupListener" />
+	<bean id="dorado.cloudo.workbench.ViewInitInterceptor"
+		class="com.bstek.dorado.cloudo.workbench.view.ViewInitInterceptor" />
+
+	<bean id="dorado.cloudo.workbench.SourceEditorInterceptor"
+		class="com.bstek.dorado.cloudo.workbench.interceptor.SourceEditorInterceptor" />
+</beans>

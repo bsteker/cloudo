@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.bstek.ide.studio.SocketStartup">
+      </startup>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+          adaptable="true"
+            id="com.bstek.ide.contribution"
+            objectClass="org.eclipse.core.resources.IResource">
+         <action
+               class="com.bstek.ide.studio.actions.OpenFileAction"
+               enablesFor="1"
+               icon="icons/cloudo.png"
+               id="com.bstek.ide.studio.actions.OpenFileAction"
+               label="在Studio中打开"
+               tooltip="在Studio中打开">
+                <selection
+                  class="org.eclipse.core.resources.IResource"
+                  name="*.view.xml">
+            </selection>
+             <selection
+                  class="org.eclipse.core.resources.IResource"
+                  name="*.model.xml">
+            </selection>
+             <selection
+                  class="org.eclipse.core.resources.IResource"
+                  name="*.touch.xml">
+            </selection>
+         </action>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.bstek.ide.studio.preferences.PreferencePage"
+            id="com.bstek.ide.studio.preferences.PreferencePage"
+            name="Dorado Studio">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.bstek.ide.studio.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="Open Studio"
+            id="com.bstek.ide.studio.actions.ActiveCloudoAction"
+            label="Open Studio"
+            visible="true">
+         <action
+               class="com.bstek.ide.studio.actions.ActiveCloudoAction"
+               icon="icons/cloudo.png"
+               id="com.bstek.ide.studio.actions.ActiveCloudoAction"
+               label="Open Studio"
+               style="push"
+               toolbarPath="org.eclipse.ui.workbench.file/print.ext"
+               tooltip="Open Studio">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

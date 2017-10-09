@@ -1,0 +1,92 @@
+.large-button,.large-button span {
+	height: 40px !important;
+	line-height: 40px !important;
+}
+
+.large-button span {
+	font-size: 18px;
+}
+
+.topbar .topbar-left {
+	background-color: #303b53;
+}
+
+.topbar {
+	background-color: #484d5c;
+}
+
+.topbar .caption,.topbar .d-button .d-icon {
+	color: #9eacc8;
+}
+
+.topbar .d-icon.fa:before {
+	margin-left: 2px;
+}
+
+.topbar .border-left {
+	border: solid rgba(158, 172, 200, 0.09) !important;
+	border-width: 0 0 0 1px !important;
+}
+
+.setting {
+	border: solid rgba(158, 172, 200, 0.20) !important;
+	padding-right: 10px;
+	border-width: 0 0 0 1px !important;
+}
+
+.setting .caption {
+	text-align: left;
+	width: 140px;
+	display: block;
+}
+
+.setting .caption:after {
+	content: ' ';
+	display: block;
+	position: absolute;
+	line-height: 0;
+	border: 6px solid;
+	border-color: #9eacc8 transparent transparent transparent;
+	right: 10px;
+	top: 18px;
+}
+
+.large-button .d-icon.fontello {
+	margin-top: -2px !important;
+}
+
+.large-button .d-icon {
+	margin-top: 0px !important;
+}
+
+.d-block-view .block,.d-block-view .block-current {
+	background-color: rgba(83, 89, 106, 0.82);
+	cursor: pointer;
+	color: #9eacc8;
+}
+
+.d-block-view .block center {
+	left: 10px;
+}
+.editor-dirty:before {
+			content: "*";
+		}
+.tools {
+	background-color: #636b7f;
+}
+
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(51, 63, 88, 0.30);
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(246, 246, 246, 0.20);
+}
+
+::-webkit-scrollbar-corner,::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(100, 100, 100, 0.4);
+}

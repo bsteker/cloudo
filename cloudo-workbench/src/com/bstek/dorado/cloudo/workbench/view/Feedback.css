@@ -1,0 +1,75 @@
+.clickable {
+		/*cursor: pointer;*/
+
+	}
+
+	.clickable:hover {
+		background-color: rgba(51, 63, 88, 0.25);
+	}
+	.feedback{
+		width: 700px;
+	}
+	.feedback > div {
+		width: 120px;
+
+		float: left;
+		text-align: center;
+		overflow: hidden;
+		padding: 30px 50px;
+		margin-left: 20px;
+		background-color: rgba(51, 63, 88, 0.09);
+
+	}
+
+	.feedback > div:first-child {
+		margin-left: 0px;
+	}
+
+	.feedback > div:hover {
+
+	}
+
+	.feedback i {
+		margin-bottom: 20px;
+	}
+
+	.feedback span {
+		line-height: 20px;
+		display: block;
+	}
+
+	.feedback i.fa {
+		font-size: 55px;
+	}
+
+	.link {
+		/*height: 180px;*/
+		padding: 40px 0px;
+		width: 700px;
+		background-color: rgba(51, 63, 88, 0.09);
+	}
+
+	.link > div {
+		float: left;
+		line-height: 24px;
+		margin-left: 40px;
+		width: 40%;
+	}
+
+	.link span {
+		/*width: 120px;*/
+		display: inline-block;
+	}
+
+	.link span:after {
+		content: ":";
+	}
+
+	.link a {
+		margin-left: 10px;
+	}
+
+	a {
+		text-decoration: underline;
+		cursor: pointer;
+	}

@@ -1,0 +1,10 @@
+{
+  "!group" : "dorado",
+  "!name" : "core",
+  "m1" : {
+    "!type" : "fn()",
+    "prototype" : {
+      "!proto" : "Node.prototype"
+    }
+  }
+}

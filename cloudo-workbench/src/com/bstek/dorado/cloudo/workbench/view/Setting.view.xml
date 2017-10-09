@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewConfig>
+	<Arguments/>
+	<Context/>
+	<Model/>
+	<View listener="spring:dorado.cloudo.workbench.ViewInitInterceptor#onViewInit" layout="">
+		<Property name="packages">base-widget-desktop</Property>
+	</View>
+</ViewConfig>

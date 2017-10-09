@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<Patterns>
+		<Pattern name="cloudo-ace-js" contentType="text/javascript"
+		         charset="UTF-8" mergeRequests='${configure["view.mergeJavaScript"]}'
+		         resourceSuffix=".js"/>
+		<Pattern name="cloudo-ace-css" contentType="text/css" charset="UTF-8"
+		         mergeRequests='${configure["view.mergeStyleSheet"]}' resourceSuffix=".css"/>
+	</Patterns>
+	<Packages>
+		<Package name="cloudo-ace" pattern="cloudo-ace-js" depends="cloudo-ace-editor,cloudo-ace-jsbeautify"></Package>
+		<Package name="cloudo-ace-editor" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/ace,
+			dorado/scripts/cloudo/ace/src-min/theme-cloudo,
+			dorado/scripts/cloudo/ace/src-min/ext-elastic_tabstops_lite,
+			dorado/scripts/cloudo/ace/src-min/ext-error_marker,
+			dorado/scripts/cloudo/ace/src-min/ext-keybinding_menu,
+			dorado/scripts/cloudo/ace/src-min/snippets/text,
+			dorado/scripts/cloudo/ace/src-min/ext-language_tools,
+			dorado/scripts/cloudo/ace/src-min/ext-linking,
+			dorado/scripts/cloudo/ace/src-min/ext-searchbox,
+			dorado/scripts/cloudo/ace/src-min/ext-spellcheck,
+			dorado/scripts/cloudo/ace/src-min/ext-split,
+			dorado/scripts/cloudo/ace/src-min/ext-statusbar,
+			dorado/scripts/cloudo/ace/src-min/ext-whitespace,
+			dorado/scripts/cloudo/ace/src-min/ext-modelist,
+			dorado/scripts/cloudo/ace/src-min/keybinding-emacs
+		</Package>
+		<Package name="dorado-ace-mode-utils" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace-mode-utils
+		</Package>
+		<Package name="dorado-ace-editor" pattern="cloudo-ace-js"
+		         depends="cloudo-ace">
+			dorado/scripts/cloudo/ace-editor
+		</Package>
+		<Package name="cloudo-jsbeautify" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/jsbeautify/jsbeautify
+		</Package>
+		<Package name="cloudo-ace-jsbeautify" pattern="cloudo-ace-js" depends="cloudo-jsbeautify">
+			dorado/scripts/cloudo/jsbeautify-ace
+		</Package>
+
+
+		<!-- Javascript Support -->
+		<Package name="cloudo-ace-javascript-support-js" pattern="cloudo-ace-js"
+		         depends="cloudo-acorn-js,cloudo-ace-tern-js,cloudo-ace-tern-defs"></Package>
+		<Package name="cloudo-acorn-js" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/acorn/acorn,
+			dorado/scripts/cloudo/acorn/acorn_loose,
+			dorado/scripts/cloudo/acorn/util/walk
+		</Package>
+		<Package name="cloudo-ace-tern-js" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/tern/lib/signal,
+			dorado/scripts/cloudo/tern/lib/tern,
+			dorado/scripts/cloudo/tern/lib/def,
+			dorado/scripts/cloudo/tern/lib/comment,
+			dorado/scripts/cloudo/tern/lib/infer,
+			dorado/scripts/cloudo/tern-ace
+		</Package>
+		<Package name="cloudo-ace-tern-defs" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/tern/defs/browser,
+			dorado/scripts/cloudo/tern/defs/chai,
+			dorado/scripts/cloudo/tern/defs/ecma5,
+			dorado/scripts/cloudo/tern/defs/jquery,
+			dorado/scripts/cloudo/tern/defs/underscore,
+			dorado/scripts/cloudo/tern/defs/dorado
+		</Package>
+
+		<!-- HTML Support -->
+		<Package name="cloudo-ace-html-support-js" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/emmet/emmet,
+			dorado/scripts/cloudo/ace/src-min/ext-emmet
+		</Package>
+
+		<!-- Ace Modes -->
+
+		<Package name="cloudo-ace-mode-abap" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-abap,
+			dorado/scripts/cloudo/ace/src-min/snippets/abap
+		</Package>
+		<Package name="cloudo-ace-mode-actionscript" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-actionscript,
+			dorado/scripts/cloudo/ace/src-min/snippets/actionscript
+		</Package>
+		<Package name="cloudo-ace-mode-ada" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-ada,
+			dorado/scripts/cloudo/ace/src-min/snippets/ada
+		</Package>
+		<Package name="cloudo-ace-mode-apache_conf" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-apache_conf,
+			dorado/scripts/cloudo/ace/src-min/snippets/apache_conf
+		</Package>
+		<Package name="cloudo-ace-mode-applescript" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-applescript,
+			dorado/scripts/cloudo/ace/src-min/snippets/applescript
+		</Package>
+		<Package name="cloudo-ace-mode-asciidoc" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-asciidoc,
+			dorado/scripts/cloudo/ace/src-min/snippets/asciidoc
+		</Package>
+		<Package name="cloudo-ace-mode-assembly_x86" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-assembly_x86,
+			dorado/scripts/cloudo/ace/src-min/snippets/assembly_x86
+		</Package>
+		<Package name="cloudo-ace-mode-autohotkey" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-autohotkey,
+			dorado/scripts/cloudo/ace/src-min/snippets/autohotkey
+		</Package>
+		<Package name="cloudo-ace-mode-batchfile" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-batchfile,
+			dorado/scripts/cloudo/ace/src-min/snippets/batchfile
+		</Package>
+		<Package name="cloudo-ace-mode-c9search" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-c9search,
+			dorado/scripts/cloudo/ace/src-min/snippets/c9search
+		</Package>
+		<Package name="cloudo-ace-mode-c_cpp" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-c_cpp,
+			dorado/scripts/cloudo/ace/src-min/snippets/c_cpp
+		</Package>
+		<Package name="cloudo-ace-mode-cirru" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-cirru,
+			dorado/scripts/cloudo/ace/src-min/snippets/cirru
+		</Package>
+		<Package name="cloudo-ace-mode-clojure" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-clojure,
+			dorado/scripts/cloudo/ace/src-min/snippets/clojure
+		</Package>
+		<Package name="cloudo-ace-mode-cobol" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-cobol,
+			dorado/scripts/cloudo/ace/src-min/snippets/cobol
+		</Package>
+		<Package name="cloudo-ace-mode-coffee" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/worker-coffee,dorado/scripts/cloudo/ace/src-min/mode-coffee,
+			dorado/scripts/cloudo/ace/src-min/snippets/coffee
+		</Package>
+		<Package name="cloudo-ace-mode-coldfusion" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-coldfusion,
+			dorado/scripts/cloudo/ace/src-min/snippets/coldfusion
+		</Package>
+		<Package name="cloudo-ace-mode-csharp" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-csharp,
+			dorado/scripts/cloudo/ace/src-min/snippets/csharp
+		</Package>
+		<Package name="cloudo-ace-mode-css" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/worker-css,dorado/scripts/cloudo/ace/src-min/mode-css,
+			dorado/scripts/cloudo/ace/src-min/snippets/css
+		</Package>
+		<Package name="cloudo-ace-mode-curly" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-curly,
+			dorado/scripts/cloudo/ace/src-min/snippets/curly
+		</Package>
+		<Package name="cloudo-ace-mode-d" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-d,
+			dorado/scripts/cloudo/ace/src-min/snippets/d
+		</Package>
+		<Package name="cloudo-ace-mode-dart" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-dart,
+			dorado/scripts/cloudo/ace/src-min/snippets/dart
+		</Package>
+		<Package name="cloudo-ace-mode-diff" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-diff,
+			dorado/scripts/cloudo/ace/src-min/snippets/diff
+		</Package>
+		<Package name="cloudo-ace-mode-django" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-django,
+			dorado/scripts/cloudo/ace/src-min/snippets/django
+		</Package>
+		<Package name="cloudo-ace-mode-dockerfile" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-dockerfile,
+			dorado/scripts/cloudo/ace/src-min/snippets/dockerfile
+		</Package>
+		<Package name="cloudo-ace-mode-dot" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-dot,
+			dorado/scripts/cloudo/ace/src-min/snippets/dot
+		</Package>
+		<Package name="cloudo-ace-mode-eiffel" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-eiffel,
+			dorado/scripts/cloudo/ace/src-min/snippets/eiffel
+		</Package>
+		<Package name="cloudo-ace-mode-ejs" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-ejs,
+			dorado/scripts/cloudo/ace/src-min/snippets/ejs
+		</Package>
+		<Package name="cloudo-ace-mode-elixir" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-elixir,
+			dorado/scripts/cloudo/ace/src-min/snippets/elixir
+		</Package>
+		<Package name="cloudo-ace-mode-elm" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-elm,
+			dorado/scripts/cloudo/ace/src-min/snippets/elm
+		</Package>
+		<Package name="cloudo-ace-mode-erlang" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-erlang,
+			dorado/scripts/cloudo/ace/src-min/snippets/erlang
+		</Package>
+		<Package name="cloudo-ace-mode-forth" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-forth,
+			dorado/scripts/cloudo/ace/src-min/snippets/forth
+		</Package>
+		<Package name="cloudo-ace-mode-ftl" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-ftl,
+			dorado/scripts/cloudo/ace/src-min/snippets/ftl
+		</Package>
+		<Package name="cloudo-ace-mode-gcode" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-gcode,
+			dorado/scripts/cloudo/ace/src-min/snippets/gcode
+		</Package>
+		<Package name="cloudo-ace-mode-gherkin" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-gherkin,
+			dorado/scripts/cloudo/ace/src-min/snippets/gherkin
+		</Package>
+		<Package name="cloudo-ace-mode-gitignore" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-gitignore,
+			dorado/scripts/cloudo/ace/src-min/snippets/gitignore
+		</Package>
+		<Package name="cloudo-ace-mode-glsl" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-glsl,
+			dorado/scripts/cloudo/ace/src-min/snippets/glsl
+		</Package>
+		<Package name="cloudo-ace-mode-golang" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-golang,
+			dorado/scripts/cloudo/ace/src-min/snippets/golang
+		</Package>
+		<Package name="cloudo-ace-mode-groovy" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-groovy,
+			dorado/scripts/cloudo/ace/src-min/snippets/groovy
+		</Package>
+		<Package name="cloudo-ace-mode-haml" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-haml,
+			dorado/scripts/cloudo/ace/src-min/snippets/haml
+		</Package>
+		<Package name="cloudo-ace-mode-handlebars" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-handlebars,
+			dorado/scripts/cloudo/ace/src-min/snippets/handlebars
+		</Package>
+		<Package name="cloudo-ace-mode-haskell" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-haskell,
+			dorado/scripts/cloudo/ace/src-min/snippets/haskell
+		</Package>
+		<Package name="cloudo-ace-mode-haxe" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-haxe,
+			dorado/scripts/cloudo/ace/src-min/snippets/haxe
+		</Package>
+		<Package name="cloudo-ace-mode-html" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/worker-html,dorado/scripts/cloudo/ace/src-min/mode-html,
+			dorado/scripts/cloudo/ace/src-min/snippets/html
+		</Package>
+		<Package name="cloudo-ace-mode-html_ruby" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-html_ruby,
+			dorado/scripts/cloudo/ace/src-min/snippets/html_ruby
+		</Package>
+		<Package name="cloudo-ace-mode-ini" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-ini,
+			dorado/scripts/cloudo/ace/src-min/snippets/ini
+		</Package>
+		<Package name="cloudo-ace-mode-io" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-io,
+			dorado/scripts/cloudo/ace/src-min/snippets/io
+		</Package>
+		<Package name="cloudo-ace-mode-jack" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-jack,
+			dorado/scripts/cloudo/ace/src-min/snippets/jack
+		</Package>
+		<Package name="cloudo-ace-mode-jade" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-jade,
+			dorado/scripts/cloudo/ace/src-min/snippets/jade
+		</Package>
+		<Package name="cloudo-ace-mode-java" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-java,
+			dorado/scripts/cloudo/ace/src-min/snippets/java
+		</Package>
+		<Package name="cloudo-ace-mode-javascript" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-javascript,
+			dorado/scripts/cloudo/ace/src-min/worker-javascript,
+			dorado/scripts/cloudo/ace/src-min/snippets/javascript
+		</Package>
+		<Package name="cloudo-ace-mode-json" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/worker-json,
+			dorado/scripts/cloudo/ace/src-min/mode-json,
+			dorado/scripts/cloudo/ace/src-min/snippets/json
+		</Package>
+		<Package name="cloudo-ace-mode-jsoniq" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-jsoniq,
+			dorado/scripts/cloudo/ace/src-min/snippets/jsoniq
+		</Package>
+		<Package name="cloudo-ace-mode-jsp" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-jsp,
+			dorado/scripts/cloudo/ace/src-min/snippets/jsp
+		</Package>
+		<Package name="cloudo-ace-mode-jsx" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-jsx,
+			dorado/scripts/cloudo/ace/src-min/snippets/jsx
+		</Package>
+		<Package name="cloudo-ace-mode-julia" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-julia,
+			dorado/scripts/cloudo/ace/src-min/snippets/julia
+		</Package>
+		<Package name="cloudo-ace-mode-latex" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-latex,
+			dorado/scripts/cloudo/ace/src-min/snippets/latex
+		</Package>
+		<Package name="cloudo-ace-mode-less" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-less,
+			dorado/scripts/cloudo/ace/src-min/snippets/less
+		</Package>
+		<Package name="cloudo-ace-mode-liquid" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-liquid,
+			dorado/scripts/cloudo/ace/src-min/snippets/liquid
+		</Package>
+		<Package name="cloudo-ace-mode-lisp" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-lisp,
+			dorado/scripts/cloudo/ace/src-min/snippets/lisp
+		</Package>
+		<Package name="cloudo-ace-mode-livescript" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-livescript,
+			dorado/scripts/cloudo/ace/src-min/snippets/livescript
+		</Package>
+		<Package name="cloudo-ace-mode-logiql" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-logiql,
+			dorado/scripts/cloudo/ace/src-min/snippets/logiql
+		</Package>
+		<Package name="cloudo-ace-mode-lsl" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-lsl,
+			dorado/scripts/cloudo/ace/src-min/snippets/lsl
+		</Package>
+		<Package name="cloudo-ace-mode-lua" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/worker-lua,dorado/scripts/cloudo/ace/src-min/mode-lua,
+			dorado/scripts/cloudo/ace/src-min/snippets/lua
+		</Package>
+		<Package name="cloudo-ace-mode-luapage" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-luapage,
+			dorado/scripts/cloudo/ace/src-min/snippets/luapage
+		</Package>
+		<Package name="cloudo-ace-mode-lucene" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-lucene,
+			dorado/scripts/cloudo/ace/src-min/snippets/lucene
+		</Package>
+		<Package name="cloudo-ace-mode-makefile" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-makefile,
+			dorado/scripts/cloudo/ace/src-min/snippets/makefile
+		</Package>
+		<Package name="cloudo-ace-mode-markdown" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-markdown,
+			dorado/scripts/cloudo/ace/src-min/snippets/markdown
+		</Package>
+		<Package name="cloudo-ace-mode-matlab" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-matlab,
+			dorado/scripts/cloudo/ace/src-min/snippets/matlab
+		</Package>
+		<Package name="cloudo-ace-mode-mel" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-mel,
+			dorado/scripts/cloudo/ace/src-min/snippets/mel
+		</Package>
+		<Package name="cloudo-ace-mode-mushcode" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-mushcode,
+			dorado/scripts/cloudo/ace/src-min/snippets/mushcode
+		</Package>
+		<Package name="cloudo-ace-mode-mysql" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-mysql,
+			dorado/scripts/cloudo/ace/src-min/snippets/mysql
+		</Package>
+		<Package name="cloudo-ace-mode-nix" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-nix,
+			dorado/scripts/cloudo/ace/src-min/snippets/nix
+		</Package>
+		<Package name="cloudo-ace-mode-objectivec" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-objectivec,
+			dorado/scripts/cloudo/ace/src-min/snippets/objectivec
+		</Package>
+		<Package name="cloudo-ace-mode-ocaml" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-ocaml,
+			dorado/scripts/cloudo/ace/src-min/snippets/ocaml
+		</Package>
+		<Package name="cloudo-ace-mode-pascal" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-pascal,
+			dorado/scripts/cloudo/ace/src-min/snippets/pascal
+		</Package>
+		<Package name="cloudo-ace-mode-perl" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-perl,
+			dorado/scripts/cloudo/ace/src-min/snippets/perl
+		</Package>
+		<Package name="cloudo-ace-mode-pgsql" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-pgsql,
+			dorado/scripts/cloudo/ace/src-min/snippets/pgsql
+		</Package>
+		<Package name="cloudo-ace-mode-php" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/worker-php,dorado/scripts/cloudo/ace/src-min/mode-php,
+			dorado/scripts/cloudo/ace/src-min/snippets/php
+		</Package>
+		<Package name="cloudo-ace-mode-plain_text" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-plain_text,
+			dorado/scripts/cloudo/ace/src-min/snippets/plain_text
+		</Package>
+		<Package name="cloudo-ace-mode-powershell" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-powershell,
+			dorado/scripts/cloudo/ace/src-min/snippets/powershell
+		</Package>
+		<Package name="cloudo-ace-mode-praat" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-praat,
+			dorado/scripts/cloudo/ace/src-min/snippets/praat
+		</Package>
+		<Package name="cloudo-ace-mode-prolog" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-prolog,
+			dorado/scripts/cloudo/ace/src-min/snippets/prolog
+		</Package>
+		<Package name="cloudo-ace-mode-properties" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-properties,
+			dorado/scripts/cloudo/ace/src-min/snippets/properties
+		</Package>
+		<Package name="cloudo-ace-mode-protobuf" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-protobuf,
+			dorado/scripts/cloudo/ace/src-min/snippets/protobuf
+		</Package>
+		<Package name="cloudo-ace-mode-python" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-python,
+			dorado/scripts/cloudo/ace/src-min/snippets/python
+		</Package>
+		<Package name="cloudo-ace-mode-r" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-r,
+			dorado/scripts/cloudo/ace/src-min/snippets/r
+		</Package>
+		<Package name="cloudo-ace-mode-rdoc" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-rdoc,
+			dorado/scripts/cloudo/ace/src-min/snippets/rdoc
+		</Package>
+		<Package name="cloudo-ace-mode-rhtml" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-rhtml,
+			dorado/scripts/cloudo/ace/src-min/snippets/rhtml
+		</Package>
+		<Package name="cloudo-ace-mode-ruby" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-ruby,
+			dorado/scripts/cloudo/ace/src-min/snippets/ruby
+		</Package>
+		<Package name="cloudo-ace-mode-rust" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-rust,
+			dorado/scripts/cloudo/ace/src-min/snippets/rust
+		</Package>
+		<Package name="cloudo-ace-mode-sass" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-sass,
+			dorado/scripts/cloudo/ace/src-min/snippets/sass
+		</Package>
+		<Package name="cloudo-ace-mode-scad" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-scad,
+			dorado/scripts/cloudo/ace/src-min/snippets/scad
+		</Package>
+		<Package name="cloudo-ace-mode-scala" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-scala,
+			dorado/scripts/cloudo/ace/src-min/snippets/scala
+		</Package>
+		<Package name="cloudo-ace-mode-scheme" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-scheme,
+			dorado/scripts/cloudo/ace/src-min/snippets/scheme
+		</Package>
+		<Package name="cloudo-ace-mode-scss" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-scss,
+			dorado/scripts/cloudo/ace/src-min/snippets/scss
+		</Package>
+		<Package name="cloudo-ace-mode-sh" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-sh,
+			dorado/scripts/cloudo/ace/src-min/snippets/sh
+		</Package>
+		<Package name="cloudo-ace-mode-sjs" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-sjs,
+			dorado/scripts/cloudo/ace/src-min/snippets/sjs
+		</Package>
+		<Package name="cloudo-ace-mode-smarty" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-smarty,
+			dorado/scripts/cloudo/ace/src-min/snippets/smarty
+		</Package>
+		<Package name="cloudo-ace-mode-snippets" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-snippets,
+			dorado/scripts/cloudo/ace/src-min/snippets/snippets
+		</Package>
+		<Package name="cloudo-ace-mode-soy_template" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-soy_template,
+			dorado/scripts/cloudo/ace/src-min/snippets/soy_template
+		</Package>
+		<Package name="cloudo-ace-mode-space" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-space,
+			dorado/scripts/cloudo/ace/src-min/snippets/space
+		</Package>
+		<Package name="cloudo-ace-mode-sql" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-sql,
+			dorado/scripts/cloudo/ace/src-min/snippets/sql
+		</Package>
+		<Package name="cloudo-ace-mode-stylus" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-stylus,
+			dorado/scripts/cloudo/ace/src-min/snippets/stylus
+		</Package>
+		<Package name="cloudo-ace-mode-svg" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-svg,
+			dorado/scripts/cloudo/ace/src-min/snippets/svg
+		</Package>
+		<Package name="cloudo-ace-mode-tcl" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-tcl,
+			dorado/scripts/cloudo/ace/src-min/snippets/tcl
+		</Package>
+		<Package name="cloudo-ace-mode-tex" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-tex,
+			dorado/scripts/cloudo/ace/src-min/snippets/tex
+		</Package>
+		<Package name="cloudo-ace-mode-text" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-text,
+			dorado/scripts/cloudo/ace/src-min/snippets/text
+		</Package>
+		<Package name="cloudo-ace-mode-textile" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-textile,
+			dorado/scripts/cloudo/ace/src-min/snippets/textile
+		</Package>
+		<Package name="cloudo-ace-mode-toml" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-toml,
+			dorado/scripts/cloudo/ace/src-min/snippets/toml
+		</Package>
+		<Package name="cloudo-ace-mode-twig" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-twig,
+			dorado/scripts/cloudo/ace/src-min/snippets/twig
+		</Package>
+		<Package name="cloudo-ace-mode-typescript" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-typescript,
+			dorado/scripts/cloudo/ace/src-min/snippets/typescript
+		</Package>
+		<Package name="cloudo-ace-mode-vala" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-vala,
+			dorado/scripts/cloudo/ace/src-min/snippets/vala
+		</Package>
+		<Package name="cloudo-ace-mode-vbscript" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-vbscript,
+			dorado/scripts/cloudo/ace/src-min/snippets/vbscript
+		</Package>
+		<Package name="cloudo-ace-mode-velocity" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-velocity,
+			dorado/scripts/cloudo/ace/src-min/snippets/velocity
+		</Package>
+		<Package name="cloudo-ace-mode-verilog" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-verilog,
+			dorado/scripts/cloudo/ace/src-min/snippets/verilog
+		</Package>
+		<Package name="cloudo-ace-mode-vhdl" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-vhdl,
+			dorado/scripts/cloudo/ace/src-min/snippets/vhdl
+		</Package>
+		<Package name="cloudo-ace-mode-xml" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-xml,
+			dorado/scripts/cloudo/ace/src-min/snippets/xml
+		</Package>
+		<Package name="cloudo-ace-mode-xquery" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/worker-xquery,dorado/scripts/cloudo/ace/src-min/mode-xquery,
+			dorado/scripts/cloudo/ace/src-min/snippets/xquery
+		</Package>
+		<Package name="cloudo-ace-mode-yaml" pattern="cloudo-ace-js">
+			dorado/scripts/cloudo/ace/src-min/mode-yaml,
+			dorado/scripts/cloudo/ace/src-min/snippets/yaml
+		</Package>
+
+
+	</Packages>
+</config>

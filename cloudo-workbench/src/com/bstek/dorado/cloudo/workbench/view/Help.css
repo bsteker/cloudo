@@ -1,0 +1,104 @@
+.shortcut-group {
+
+}
+
+.shortcut-group .shortcut {
+	width: 150px;
+	text-align: right;
+	display: inline-block;
+	line-height: 40px;
+
+}
+
+.shortcut-group .description {
+	margin-left: 20px;
+}
+
+.shortcut-key {
+	display: inline-block;
+	padding: 3px 8px 5px;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 14px;
+	color: #6e6e6e;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-color: #fcfcfc;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	text-transform: capitalize;
+	box-shadow: inset 0 -2px #ebebeb, inset 0 -3px #ffffff, 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.shortcut-key:active {
+	padding-top: 4px;
+	padding-bottom: 4px;
+	box-shadow: inset 0 -1px #ebebeb, inset 0 -2px #ffffff, 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.shortcut-key:active:after {
+	-webkit-transform: translate(0, 1px);
+	-ms-transform: translate(0, 1px);
+	transform: translate(0, 1px);
+}
+
+.mac .shortcut-key.ctrl,
+.mac .shortcut-key.shift,
+.mac .shortcut-key.alt,
+.shortcut-key.up,
+.shortcut-key.down,
+.shortcut-key.left,
+.shortcut-key.right {
+	text-indent: 99999px;
+	position: relative;
+	width: 9px;
+}
+
+.mac .shortcut-key.ctrl:after,
+.mac .shortcut-key.shift:after,
+.mac .shortcut-key.alt:after,
+.shortcut-key.up:after,
+.shortcut-key.down:after,
+.shortcut-key.left:after,
+.shortcut-key.right:after {
+	display: block;
+	position: absolute;
+	text-align: center;
+	left: 5px;
+	top: 4px;
+	width: 16px;
+	height: 16px;
+	text-indent: 0;
+}
+
+.mac .shortcut-key.ctrl:after {
+	content: '⌘';
+}
+
+.mac .shortcut-key.shift:after {
+	content: '⇧';
+}
+
+.mac .shortcut-key.alt:after {
+	content: '⌥';
+}
+
+.shortcut-key.up:after {
+	content: '↑';
+	top: 2px;
+}
+
+.shortcut-key.down:after {
+	content: '↓';
+	top: 2px;
+}
+
+.shortcut-key.left:after {
+	content: '←';
+	top: 2px;
+}
+
+.shortcut-key.right:after {
+	content: '→';
+	top: 2px;
+}

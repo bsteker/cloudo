@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<Patterns>
+		<Pattern name="cloudo-jseditor-js" contentType="text/javascript"
+			charset="UTF-8" mergeRequests='${configure["view.mergeJavaScript"]}'
+			resourceSuffix=".js" />
+		<Pattern name="cloudo-jseditor-css" contentType="text/css"
+			charset="UTF-8" mergeRequests='${configure["view.mergeStyleSheet"]}'
+			resourceSuffix=".css" />
+	</Patterns>
+	<Packages>
+		<!-- cloudo jseditor -->
+		<Package name="cloudo-jseditor" pattern="cloudo-jseditor-js"
+			depends="cloudo-widget,cloudo-jseditor-css,cloudo-jseditor-js"></Package>
+
+		<Package name="cloudo-jseditor-css" pattern="cloudo-jseditor-css">
+			dorado/scripts/cloudo/jseditor/copy_codemirror_v3.16,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/theme/neat,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/hint/show-hint,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/dialog/dialog,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/tern/tern,
+			dorado/scripts/cloudo/jseditor/jseditor
+		</Package>
+
+		<Package name="cloudo-jseditor-js" pattern="cloudo-jseditor-js"
+			depends="cloudo-codemirror-js,cloudo-acorn-js,cloudo-tern-js,cloudo-baseeditor-js,cloudo-apidef-js,cloudo-jsbeautify"></Package>
+		<Package name="cloudo-codemirror-js" pattern="cloudo-jseditor-js">
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/lib/codemirror,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/mode/javascript/javascript,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/mode/xml/xml,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/dialog/dialog,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/hint/show-hint,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/edit/closebrackets,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/edit/matchbrackets,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/fold/foldcode,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/fold/foldgutter,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/fold/brace-fold,
+			dorado/scripts/cloudo/jseditor/copy_codemirror_search,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/search/searchcursor,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/search/match-highlighter,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/selection/active-line,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/comment/comment,
+			dorado/scripts/cloudo/3rd/codemirror/v3.16/addon/comment/continuecomment,
+			dorado/scripts/cloudo/3rd/jshint/v12/jshint
+		</Package>
+		<Package name="cloudo-acorn-js" pattern="cloudo-jseditor-js">
+			dorado/scripts/cloudo/3rd/acorn/v0.3.1/acorn,
+			dorado/scripts/cloudo/3rd/acorn/v0.3.1/acorn_loose,
+			dorado/scripts/cloudo/3rd/acorn/v0.3.1/util/walk
+		</Package>
+		<Package name="cloudo-tern-js" pattern="cloudo-jseditor-js">
+			dorado/scripts/cloudo/3rd/tern/v0.4.0/lib/signal,
+			dorado/scripts/cloudo/3rd/tern/v0.4.0/lib/tern,
+			dorado/scripts/cloudo/jseditor/copy_tern_def_v0.4.0,
+			dorado/scripts/cloudo/3rd/tern/v0.4.0/lib/comment,
+			dorado/scripts/cloudo/jseditor/copy_infer_v0.4.0,
+			dorado/scripts/cloudo/3rd/tern/v0.4.0/plugin/doc_comment
+		</Package>
+
+		<Package name="cloudo-baseeditor-js" pattern="cloudo-jseditor-js">
+			dorado/scripts/cloudo/jseditor/copy_tern_addon_v3.16,
+			dorado/scripts/cloudo/jseditor/jseditor,
+			dorado/scripts/cloudo/jseditor/jseditor-hint,
+			dorado/scripts/cloudo/jseditor/jseditor-expressionHelper,
+			dorado/scripts/cloudo/jseditor/jseditor-doradoHelper,
+			dorado/scripts/cloudo/jseditor/jseditor-controller
+		</Package>
+
+		<Package name="cloudo-apidef-js" pattern="cloudo-jseditor-js">
+			dorado/scripts/cloudo/jseditor/api/ecma5,
+			dorado/scripts/cloudo/jseditor/api/browser,
+			dorado/scripts/cloudo/jseditor/api/jquery,
+			dorado/scripts/cloudo/jseditor/DORADO_CAPI_DEF
+		</Package>
+
+	</Packages>
+</config>

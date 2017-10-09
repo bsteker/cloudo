@@ -1,0 +1,69 @@
+.c-breadcrumb {
+	padding-top: 3px;
+	background: #EdEdEd;
+	overflow: hidden;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.c-breadcrumb ul {
+	padding: 0px;
+	margin: 0px;
+	width: 5000px;
+}
+
+.c-breadcrumb ul li {
+	display: table-cell;
+}
+
+.c-breadcrumb ul li a {
+	float: left;
+	background: #EdEdEd;
+	text-align: center;
+	padding: 0px 3px 0px 13px;
+	position: relative;
+	margin: 0 2px 0 0;
+	text-decoration: none;
+	color: #0e82c7;
+}
+
+.c-breadcrumb ul li a .i-after {
+	content: "";
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	border-left: 8px solid #EdEdEd;
+	position: absolute;
+	right: -8px;
+	top: 0;
+	z-index: 1;
+}
+
+.c-breadcrumb ul li a .i-before {
+	content: "";
+	border-top: 8px solid transparent;
+	border-bottom: 8px solid transparent;
+	/*决定箭头颜色*/
+	border-left: 8px solid #C5C5C7;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.c-breadcrumb ul li:first-child a .i-before {
+	display: none;
+}
+
+.c-breadcrumb ul li:last-child a {
+	padding-right: 20px;
+}
+
+.c-breadcrumb ul li:last-child a .i-after {
+	display: none;
+}
+
+.c-breadcrumb ul li a:hover {
+	text-decoration: underline;
+}
+
+

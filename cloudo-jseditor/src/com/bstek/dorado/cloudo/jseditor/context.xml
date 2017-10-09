@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean parent="dorado.packagesConfigLoader">
+		<property name="configLocation" value="com/bstek/dorado/cloudo/jseditor/packages-config.xml" />
+	</bean>
+
+	<bean id="dorado.cloudo.jseditor.startupListener" class="com.bstek.dorado.cloudo.jseditor.StartupListener">
+		<property name="jsdocService" ref="dorado.cloudo.jsdocService"></property>
+	</bean>
+
+	<!-- JavaScript Doc -->
+	<bean id="dorado.cloudo.jsdocService" class="com.bstek.dorado.cloudo.jseditor.JsdocService">
+		<property name="archiveDir" value="${dorado.cloudo.clientApiDir}"></property>
+	</bean>
+</beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean parent="dorado.packagesConfigLoader">
+		<property name="configLocation"
+			value="com/bstek/dorado/cloudo/web/packages-config.xml" />
+	</bean>
+	<bean id="dorado.cloudo.viewService" class="com.bstek.dorado.cloudo.web.ViewEditorInitializer"
+		parent="dorado.vidor.viewInitSupport">
+	</bean>
+	<bean id="dorado.cloudo.ViewEditorService" class="com.bstek.dorado.cloudo.web.service.ViewEditorService">
+	</bean>
+	<bean class="com.bstek.dorado.cloudo.web.StartupListener" />
+</beans>

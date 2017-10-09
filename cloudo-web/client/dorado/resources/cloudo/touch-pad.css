@@ -1,0 +1,41 @@
+.c-touch-pad{
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #a8a8a8;
+	border-radius: 20px;
+	padding: 30px 20px 50px 20px;
+	background-color: #f0f0f0;
+}
+
+.c-touch-pad .content {
+	width: 100%;
+	height: 100%;
+	border: 2px solid #a8a8a8;
+	border-radius: 6px;
+}
+
+.c-touch-pad .camera {
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	margin-left: -5px;
+	box-sizing: border-box;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #a8a8a8;
+	border-radius: 50%;
+}
+
+.c-touch-pad .button {
+	position: absolute;
+	left: 50%;
+	bottom: 14px;
+	margin-left: -50px;
+	box-sizing: border-box;
+	width: 100px;
+	height: 20px;
+	border: 2px solid #a8a8a8;
+	border-radius: 6px;
+}

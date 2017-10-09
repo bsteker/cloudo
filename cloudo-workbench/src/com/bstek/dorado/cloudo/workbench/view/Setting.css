@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+.main-menu > .d-tabcolumn  > .tabs-wrap > .tabs > .tab .caption {
+	float: right !important;
+	margin-right: 10px;
+}
+
+.back{
+	border:1px solid #9a9a9a !important;
+}
+.tab-title{
+	font-size: 24px;
+}
+
+.tab-title-container{
+	border-bottom:1px solid rgba(154, 154, 154, 0.05) !important;
+}

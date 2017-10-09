@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Bstek Dorado Studio" url="http://localhost:8080/com.bstek.ide.studio.update">
+      Eclipse Install/Update site for Studio
+   </description>
+   <feature url="features/com.bstek.ide.studio.feature_1.0.1.jar" id="com.bstek.ide.studio.feature" version="1.0.1">
+      <category name="com.bstek.ide.studio"/>
+   </feature>
+   <category-def name="com.bstek.ide.studio" label="com.bstek.ide.studio">
+      <description>
+         BSTEK STUDIO PLUGINS
+      </description>
+   </category-def>
+</site>

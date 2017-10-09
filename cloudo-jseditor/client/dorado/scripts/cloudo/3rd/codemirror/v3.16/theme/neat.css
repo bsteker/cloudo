@@ -1,0 +1,100 @@
+/* Based on mbonaci's Brackets mbo theme */
+/*
+.cm-s-neat.CodeMirror {background: #2c2c2c; color: #ffffe9;}
+.cm-s-neat div.CodeMirror-selected {background: #716C62 !important;}
+.cm-s-neat .CodeMirror-gutters {background: #4e4e4e; border-right: 0px;}
+*/
+.cm-s-neat.CodeMirror {
+	background: #484d5d;
+	color: #ffffe9;
+}
+
+.cm-s-neat div.CodeMirror-selected {
+	background: #716C62 !important;
+}
+
+.cm-s-neat .CodeMirror-gutters {
+	background: #3f4454;
+	border-right: 0px;
+}
+
+.cm-s-neat .CodeMirror-linenumber {
+	color: #dadada;
+}
+
+.cm-s-neat .CodeMirror-cursor {
+	border-left: 1px solid #ffffec !important;
+}
+
+.cm-s-neat span.cm-comment {
+	color: #95958a;
+}
+
+.cm-s-neat span.cm-atom {
+	color: #00a8c6;
+}
+
+.cm-s-neat span.cm-number {
+	color: #00a8c6;
+}
+
+.cm-s-neat span.cm-property, .cm-s-neat span.cm-attribute {
+	color: #9ddfe9;
+}
+
+.cm-s-neat span.cm-keyword {
+	color: #ffb928;
+}
+
+.cm-s-neat span.cm-string {
+	color: #ffcf6c;
+}
+
+.cm-s-neat span.cm-variable {
+	color: #ffffec;
+}
+
+.cm-s-neat span.cm-variable-2 {
+	color: #00a8c6;
+}
+
+.cm-s-neat span.cm-def {
+	color: #ffffec;
+}
+
+.cm-s-neat span.cm-bracket {
+	color: #fffffc;
+	font-weight: bold;
+}
+
+.cm-s-neat span.cm-tag {
+	color: #9ddfe9;
+}
+
+.cm-s-neat span.cm-link {
+	color: #f54b07;
+}
+
+.cm-s-neat span.cm-error {
+	background: #636363;
+	color: #ffffec;
+}
+
+.cm-s-neat .CodeMirror-activeline-background {
+	background: #494b41 !important;
+}
+
+.cm-s-neat .CodeMirror-matchingbracket {
+	text-decoration: underline;
+	color: #f5e107 !important;
+}
+
+.cm-s-neat .CodeMirror-matchingtag {
+	background: #4e4e4e;
+}
+
+.cm-s-neat span.cm-searching {
+	background-color: none;
+	background: none;
+	box-shadow: 0 0 0 1px #ffffec;
+}

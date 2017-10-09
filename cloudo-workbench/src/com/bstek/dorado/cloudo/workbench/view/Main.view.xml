@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewConfig>
+	<Arguments/>
+	<Context/>
+	<Model>
+		<DataType name="File">
+			<Property name="creationType">com.bstek.dorado.cloudo.workbench.entity.FileEntity</Property>
+			<PropertyDef name="directory">
+				<Property name="dataType">boolean</Property>
+			</PropertyDef>
+			<PropertyDef name="isDirectory">
+				<Property name="dataType">boolean</Property>
+			</PropertyDef>
+			<PropertyDef name="md5">
+				<Property name="dataType">String</Property>
+			</PropertyDef>
+			<PropertyDef name="mode">
+				<Property name="dataType">String</Property>
+			</PropertyDef>
+			<PropertyDef name="name">
+				<Property name="dataType">String</Property>
+			</PropertyDef>
+			<PropertyDef name="path">
+				<Property name="dataType">String</Property>
+			</PropertyDef>
+			<Reference name="children">
+				<Property name="dataProvider">dorado.cloudo.workbench.FileController#getChildren</Property>
+				<Property name="dataType">[SELF]</Property>
+				<Property name="parameter">$${this.path}</Property>
+			</Reference>
+		</DataType>
+	</Model>
+	<View listener="spring:dorado.cloudo.workbench.ViewInitInterceptor#onViewInit" layout="regionPadding:1;">
+		<Property name="packages">font-awesome,silk,entypo,tree,cloudo-icon,cloudo-widget-breadcrumb,cloudo-workbench-component,dorado-ace-mode-utils,block-view</Property>
+		<Property name="title">Dorado Cloudo</Property>
+		<DataSet id="FileDataSet">
+			<Property name="dataProvider">dorado.cloudo.workbench.FileController#getChildren</Property>
+			<Property name="dataType">[File]</Property>
+			<ClientEvent name="onCreate" signature="self,arg">self.findEntityByMD5 = function(md5) {
+  var dataPath = &quot;children(R)[@.get(&apos;md5&apos;)==&apos;&quot; + md5 + &quot;&apos;]&quot;;
+  var entity = self.getData(dataPath, {
+    loadMode: &quot;never&quot;
+  });
+  return entity;
+}</ClientEvent>
+		</DataSet>
+		<AjaxAction id="newFileAction">
+			<Property name="async">false</Property>
+			<Property name="service">dorado.cloudo.workbench.FileController#newFile</Property>
+		</AjaxAction>
+		<AjaxAction id="removeFileAction">
+			<Property name="async">false</Property>
+			<Property name="service">dorado.cloudo.workbench.FileController#remove</Property>
+		</AjaxAction>
+		<AjaxAction id="mkdirAction">
+			<Property name="async">false</Property>
+			<Property name="service">dorado.cloudo.workbench.FileController#mkdir</Property>
+		</AjaxAction>
+		<AjaxAction id="existsAction">
+			<Property name="async">false</Property>
+			<Property name="service">dorado.cloudo.workbench.FileController#exists</Property>
+		</AjaxAction>
+	</View>
+</ViewConfig>

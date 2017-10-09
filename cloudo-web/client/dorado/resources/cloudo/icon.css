@@ -1,0 +1,35 @@
+.cloudo-icon {
+}
+.cloudo-icon-dorado7-small {
+	background-image: url(image/dorado7-16X16.png);
+}
+
+.cloudo-icon-view {
+	background-image: url(image/view.gif);
+}
+
+.cloudo-icon-eclipse {
+	background-image: url(image/eclipse.png);
+}
+
+.cloudo-icon-touch {
+	background-image: url(image/touch.gif)
+}
+
+.cloudo-icon-model {
+	background-image: url(image/model.gif)
+}
+
+.cloudo-icon-bolt {
+	background-image: url(image/bolt.png)
+}
+
+.cloudo-icon-cloudo-small {
+	background-image: url(image/cloudo-small.png)
+}
+
+.c-drawpad-iframe-repeat {
+	background: url(image/drawpad_bg.png) repeat transparent;
+}
+
+

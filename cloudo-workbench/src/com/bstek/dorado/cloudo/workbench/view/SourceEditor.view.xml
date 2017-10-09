@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ViewConfig>
+	<Arguments/>
+	<Context/>
+	<Model/>
+	<View listener="spring:dorado.cloudo.workbench.SourceEditorInterceptor#onView" layout="">
+		<AjaxAction id="writeFileAction">
+			<Property name="service">dorado.cloudo.workbench.FileController#writeFile</Property>
+		</AjaxAction>
+		<AceEditor id="sourceEditor">
+		</AceEditor>
+	</View>
+</ViewConfig>

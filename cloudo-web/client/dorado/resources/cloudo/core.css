@@ -1,0 +1,160 @@
+@CHARSET "UTF-8";
+
+body,table {
+	font-size: 9pt;
+	font-family: "Microsoft YaHei", Arial, sans-serif;
+}
+
+.dod-bottom {
+	border-bottom: 2px solid #ee826d;
+}
+
+.dod-top {
+	border-top: 2px solid #ee826d;
+}
+ 
+.c-invisible {
+	display: none;
+}
+
+.c-float-bar-steer {
+	width: 16px;
+	height: 14px;
+	top: -14px;
+	right: -1px;
+	position: absolute;
+	border: 1px solid #bbbbbb;
+	border-bottom-width: 0;
+	background: #EEEEEE;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+}
+
+.c-float-bar-steer img {
+	margin: 2px 0 0 1px;
+	width: 12px;
+	height: 12px;
+	opacity: 0.5;
+}
+
+.c-float-box {
+	z-index: 99999;
+	position: absolute;
+	left: 350px;
+	top: 20px;
+	min-height: 40px;
+	min-width: 60px;
+	max-width: 100px;
+	background: #636b7f;
+	border: 1px solid #828ba6;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-webkit-box-shadow: 1px 1px 2px #636b7f;
+}
+
+.c-float-box .steer {
+	border-bottom: 1px solid #828ba6;
+	height: 10px;
+	background: #636b7f;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	cursor: pointer;
+	margin-bottom: 1px;
+}
+
+
+.c-float-box .c-horizontal-separator {
+	display: inline-block;
+}
+
+.c-float-box .c-vertical-separator {
+	width: 100%;
+	margin-bottom: 2px;
+}
+
+.c-float-box .c-vertical-separator div {
+	border-bottom: 1px solid #C4C4C4;
+	position: absolute;
+	left: 3px;
+	right: 3px;
+}
+
+.c-icon-picker-value-icon {
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+
+
+/* Layer */
+.c-layer {
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+	top: initial;
+}
+
+.c-layer-maximized {
+	border-radius: 0;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.c-help fieldset {
+	border: 0;
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #EEE;
+}
+
+.c-help fieldset legend {
+	padding: 5px 10px;
+	background-color: #4F709F;
+	color: #FFF;
+}
+
+.c-help fieldset strong {
+	margin-left: 15px;
+}
+/* 属性编辑器显示选项 */
+.c-property-show-option {
+	-webkit-box-shadow: none;
+	background: transparent none;
+	border: none;
+	cursor: pointer;
+	font: inherit;
+	margin: 5px 15px;
+	padding: 0 4px;
+}
+
+/* Dorado icon Bug 兼容 */
+.d-icon {
+	line-height: 20px !important;
+}
+
+/* 组建选择器组件图标显示样式 */
+.c-component-selector-img{
+	position: absolute;
+	left: 41px;
+	top: 7px;
+	width: 16px;
+	height: 16px;
+}
+
+/* 树状编辑器上布局显示样式 */
+.c-node-layout-label{
+    font-size: 12px;
+    color: #b7b7b7;
+    margin-left: 5px;
+
+}
+.cloudo-tree-editor .r-name{
+	display: none;
+	float: right;
+}
+.cloudo-tree-editor .current-row .r-name{
+	display: inline-block;
+}
